@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="nav40_demo" type="nav40_demo_node" name="nav40_demo_node" required="true"/>
+<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 /base_link /imu_link 100"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find nav40_demo)/rviz/demo.rviz" required="true"/>
+
+</launch>
